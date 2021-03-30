@@ -20,19 +20,19 @@ public class CidadaoController {
     @Autowired
     private SturClient client;
 
-    @RequestMapping(value = "iptu/cpf/{cpf}",
+    @RequestMapping(value = "iptu/cpf/{cpf}/inscricao/{inscricao}",
             method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> recuperaIptu(@PathVariable("cpf") String cpf) {
-        List<Imposto> impostos = client.recuperaIptu(cpf);
+    public ResponseEntity<?> recuperaIptu(@PathVariable("cpf") String cpf, @PathVariable("inscricao") Integer inscricao) {
+        List<Imposto> impostos = client.recuperaIptu(cpf, inscricao);
         if (impostos.isEmpty())
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(impostos);
         else return new ResponseEntity<>(impostos, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "itr/cpf/{cpf}",
+    @RequestMapping(value = "itr/cpf/{cpf}/inscricao/{inscricao}",
             method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> recuperaItr(@PathVariable("cpf") String cpf) {
-        List<Imposto> impostos = client.recuperaItr(cpf);
+    public ResponseEntity<?> recuperaItr(@PathVariable("cpf") String cpf, @PathVariable("inscricao") Integer inscricao) {
+        List<Imposto> impostos = client.recuperaItr(cpf, inscricao);
         if (impostos.isEmpty())
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(impostos);
         else return new ResponseEntity<>(impostos, HttpStatus.OK);

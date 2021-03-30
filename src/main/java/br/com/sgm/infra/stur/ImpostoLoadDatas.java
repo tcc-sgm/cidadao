@@ -11,8 +11,7 @@ public class ImpostoLoadDatas {
 
     public static List<Imposto> getImpostos(TipoImpostoEnum tipoImpostoEnum) {
         List<Imposto> impostos = new ArrayList<>();
-        Imposto imp1 = Imposto.builder().
-                id(1)
+        Imposto imp1 = Imposto.builder()
                 .proprietario("Erick Ricardo da Mota")
                 .cpfCnpj("46406708776")
                 .endereco("Travessa Rio Tigre")
@@ -28,8 +27,7 @@ public class ImpostoLoadDatas {
                 .inscricao(397177689)
                 .build();
 
-        Imposto imp2 = Imposto.builder().
-                id(2)
+        Imposto imp2 = Imposto.builder()
                 .proprietario("Maya Pietra Isis Viana")
                 .cpfCnpj("88767122167")
                 .endereco("Rua Sancho Canafístula")
@@ -45,8 +43,7 @@ public class ImpostoLoadDatas {
                 .inscricao(256748883)
                 .build();
 
-        Imposto imp3 = Imposto.builder().
-                id(3)
+        Imposto imp3 = Imposto.builder()
                 .proprietario("Maya Pietra Isis Viana")
                 .cpfCnpj("88767122167")
                 .endereco("Santa Maria da Codipe")
@@ -62,8 +59,7 @@ public class ImpostoLoadDatas {
                 .inscricao(149496023)
                 .build();
 
-        Imposto imp4 = Imposto.builder().
-                id(4)
+        Imposto imp4 = Imposto.builder()
                 .proprietario("Marcos Luan Mateus Rezende")
                 .cpfCnpj("47897794326")
                 .endereco("Rua Edson Castro")
@@ -79,8 +75,7 @@ public class ImpostoLoadDatas {
                 .inscricao(274167864)
                 .build();
 
-        Imposto imp5 = Imposto.builder().
-                id(5)
+        Imposto imp5 = Imposto.builder()
                 .proprietario("Marcos Luan Mateus Rezende")
                 .cpfCnpj("47897794326")
                 .endereco("Rua Sabino Cardoso de Araújo")
@@ -96,8 +91,7 @@ public class ImpostoLoadDatas {
                 .inscricao(306035194)
                 .build();
 
-        Imposto imp6 = Imposto.builder().
-                id(6)
+        Imposto imp6 = Imposto.builder()
                 .proprietario("Andrea Fátima Pires")
                 .cpfCnpj("03259466711")
                 .endereco("Setor Tradicional (São Sebastião)")
@@ -113,8 +107,7 @@ public class ImpostoLoadDatas {
                 .inscricao(214488792)
                 .build();
 
-        Imposto imp7 = Imposto.builder().
-                id(7)
+        Imposto imp7 = Imposto.builder()
                 .proprietario("Leonardo Bruno Hugo Cardoso")
                 .cpfCnpj("52042193747")
                 .endereco("Travessa Coréia")
@@ -130,8 +123,7 @@ public class ImpostoLoadDatas {
                 .inscricao(52042193)
                 .build();
 
-        Imposto imp8 = Imposto.builder().
-                id(8)
+        Imposto imp8 = Imposto.builder()
                 .proprietario("Renan Marcos da Cunha")
                 .cpfCnpj("78310407149")
                 .endereco("Avenida 8")
@@ -147,8 +139,7 @@ public class ImpostoLoadDatas {
                 .inscricao(296434346)
                 .build();
 
-        Imposto imp9 = Imposto.builder().
-                id(1)
+        Imposto imp9 = Imposto.builder()
                 .proprietario("Jonathan Cabral")
                 .cpfCnpj("02963866165")
                 .endereco("Setor CHS Conjunto 76")
@@ -164,8 +155,7 @@ public class ImpostoLoadDatas {
                 .inscricao(2923651)
                 .build();
 
-        Imposto imp10 = Imposto.builder().
-                id(1)
+        Imposto imp10 = Imposto.builder()
                 .proprietario("Andre Sousa")
                 .cpfCnpj("82610233171")
                 .endereco("SHC 23 Mansoes norte")

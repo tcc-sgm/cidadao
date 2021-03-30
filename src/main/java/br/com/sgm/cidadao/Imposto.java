@@ -6,7 +6,6 @@ import lombok.Getter;
 @Getter
 @Builder
 public class Imposto {
-    private Integer id;
     private String proprietario;
     private String cpfCnpj;
     private String endereco;
@@ -20,24 +19,4 @@ public class Imposto {
     private int tamanho;
     private int ano;
     private Integer inscricao;
-
-    @Override
-    public String toString() {
-        return "Imposto{" +
-                "id=" + id +
-                ", proprietario='" + proprietario + '\'' +
-                ", cpfCnpj='" + cpfCnpj + '\'' +
-                ", endereco='" + endereco + '\'' +
-                ", numero='" + numero + '\'' +
-                ", cep='" + cep + '\'' +
-                ", cidade='" + cidade + '\'' +
-                ", estado='" + estado + '\'' +
-                ", tipoCasa=" + tipoCasa +
-                ", tipoImposto=" + tipoImposto +
-                ", valor='" + valor + '\'' +
-                ", tamanho=" + tamanho +
-                ", ano=" + ano +
-                ", inscricao='" + inscricao + '\'' +
-                '}';
-    }
 }

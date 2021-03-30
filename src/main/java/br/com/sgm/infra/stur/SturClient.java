@@ -18,11 +18,15 @@ public class SturClient {
         itrImpostos = ImpostoLoadDatas.getImpostos(TipoImpostoEnum.ITR);
     }
 
-    public List<Imposto> recuperaIptu(String cpf) {
-        return iptuImpostos.stream().filter(iptu -> cpf.equals(iptu.getCpfCnpj())).collect(Collectors.toList());
+    public List<Imposto> recuperaIptu(String cpf, Integer inscricao) {
+        return iptuImpostos.stream()
+                .filter(iptu -> cpf.equals(iptu.getCpfCnpj()) && inscricao.equals(iptu.getInscricao()))
+                .collect(Collectors.toList());
     }
 
-    public List<Imposto> recuperaItr(String cpf) {
-        return itrImpostos.stream().filter(itr -> cpf.equals(itr.getCpfCnpj())).collect(Collectors.toList());
+    public List<Imposto> recuperaItr(String cpf, Integer inscricao) {
+        return itrImpostos.stream()
+                .filter(itr -> cpf.equals(itr.getCpfCnpj()) && inscricao.equals(itr.getInscricao()))
+                .collect(Collectors.toList());
     }
 }
