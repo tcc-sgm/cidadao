@@ -1,13 +1,13 @@
-package br.com.sgm.infra.stur;
+package br.com.sgm.service;
 
-import br.com.sgm.cidadao.Imposto;
-import br.com.sgm.cidadao.TipoCasaEnum;
-import br.com.sgm.cidadao.TipoImpostoEnum;
+import br.com.sgm.model.Imposto;
+import br.com.sgm.model.TipoCasaEnum;
+import br.com.sgm.model.TipoImpostoEnum;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImpostoLoadDatas {
+public class ImpostoMockDatas {
 
     public static List<Imposto> getImpostos(TipoImpostoEnum tipoImpostoEnum) {
         List<Imposto> impostos = new ArrayList<>();

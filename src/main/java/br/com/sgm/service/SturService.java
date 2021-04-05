@@ -1,21 +1,21 @@
-package br.com.sgm.infra.stur;
+package br.com.sgm.service;
 
-import br.com.sgm.cidadao.Imposto;
-import br.com.sgm.cidadao.TipoImpostoEnum;
+import br.com.sgm.model.Imposto;
+import br.com.sgm.model.TipoImpostoEnum;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class SturClient {
+public class SturService {
 
     private List<Imposto> iptuImpostos;
     private List<Imposto> itrImpostos;
 
-    public SturClient() {
-        iptuImpostos = ImpostoLoadDatas.getImpostos(TipoImpostoEnum.IPTU);
-        itrImpostos = ImpostoLoadDatas.getImpostos(TipoImpostoEnum.ITR);
+    public SturService() {
+        iptuImpostos = ImpostoMockDatas.getImpostos(TipoImpostoEnum.IPTU);
+        itrImpostos = ImpostoMockDatas.getImpostos(TipoImpostoEnum.ITR);
     }
 
     public List<Imposto> recuperaIptu(String cpf, Integer inscricao) {

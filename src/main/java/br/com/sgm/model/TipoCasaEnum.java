@@ -1,4 +1,4 @@
-package br.com.sgm.cidadao;
+package br.com.sgm.model;
 
 public enum TipoCasaEnum {
 
