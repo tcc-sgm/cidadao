@@ -1,4 +1,7 @@
+Este é o repositorio foi criado para para disponibilizar serviços para o cidadão. Como serviço de consulta impostos e serviço de noticias.
+Para o acesso de todas as funcionalidades o usuário deve estar autenticado.
 
+````Em ambiente produtivo não será possível chamar esse serviço diretamente, todas as requisições deverão passar pelo API-GATEWAY.````
 
 Membros:
  - [Jonathan Cabral](mailto:dev.jonathancabral@gmail.com)
