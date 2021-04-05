@@ -4,6 +4,7 @@ import br.com.sgm.model.Noticia;
 import br.com.sgm.repository.NoticiaRepository;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +28,7 @@ public class NoticiasService {
     }
 
     public Noticia save(Noticia noticia) {
+        noticia.setCriacao(new Date());
         return repository.save(noticia);
     }
 

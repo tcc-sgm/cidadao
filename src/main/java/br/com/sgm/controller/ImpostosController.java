@@ -20,14 +20,13 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("imposto/")
-public class CidadaoController {
+@RequestMapping("impostos/")
+public class ImpostosController {
 
     @Autowired
     private SturService client;
 
     @GetMapping(path = "iptu/cpf/{cpf}/inscricao/{inscricao}", produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiOperation(value = "${user-controller.signup}")
     @ApiResponses(value = {
             @ApiResponse(code = 400, message = "Something went wrong"),
             @ApiResponse(code = 403, message = "Access Denied"),
@@ -40,7 +39,6 @@ public class CidadaoController {
     }
 
     @GetMapping(path = "itr/cpf/{cpf}/inscricao/{inscricao}", produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiOperation(value = "${user-controller.signup}")
     @ApiResponses(value = {
             @ApiResponse(code = 400, message = "Something went wrong"),
             @ApiResponse(code = 403, message = "Access Denied"),
