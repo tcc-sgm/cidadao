@@ -25,6 +25,7 @@ public class NoticiasController {
 
     @GetMapping
     @ApiOperation(value = "Recupera todas noticias")
+//    @Secured({"ROLE_ADMIN","ROLE_USER", "ROLE_CITIZEN"})
     @ApiResponses(value = {
             @ApiResponse(code = 404, message = "Sem noticias cadastradas")
     })
