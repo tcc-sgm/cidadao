@@ -4,6 +4,8 @@ import br.com.sgm.model.Imposto;
 import br.com.sgm.service.SturService;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+
+import java.util.Collections;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,6 +27,7 @@ public class ImpostosController {
 
     @GetMapping(path = "iptu/cpf/{cpf}/inscricao/{inscricao}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "OK", response = Imposto.class, responseContainer = "List"),
             @ApiResponse(code = 400, message = "Something went wrong"),
             @ApiResponse(code = 403, message = "Access Denied"),
     })
@@ -39,6 +42,7 @@ public class ImpostosController {
 
     @GetMapping(path = "itr/cpf/{cpf}/inscricao/{inscricao}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Ok", response = Imposto.class, responseContainer = "List"),
             @ApiResponse(code = 400, message = "Something went wrong"),
             @ApiResponse(code = 403, message = "Access Denied"),
     })

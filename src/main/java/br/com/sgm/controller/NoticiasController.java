@@ -29,6 +29,7 @@ public class NoticiasController {
     @ApiOperation(value = "Recupera todas noticias")
 //    @Secured({"ROLE_ADMIN","ROLE_USER", "ROLE_CITIZEN"})
     @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Ok", response = Noticia.class, responseContainer = "List"),
             @ApiResponse(code = 404, message = "Sem noticias cadastradas")
     })
     public ResponseEntity recuperaTodas() {
@@ -41,6 +42,7 @@ public class NoticiasController {
     @GetMapping("/{id}")
     @ApiOperation(value = "Recupera por id")
     @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Noticia encontrada", response = Noticia.class),
             @ApiResponse(code = 404, message = "Protocolo não encontrado")
     })
     public ResponseEntity recuperaPorId(@PathVariable("id") Integer id) {
@@ -53,6 +55,7 @@ public class NoticiasController {
     @GetMapping("/{titulo}/titulo")
     @ApiOperation(value = "Recupera por titulo")
     @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Noticia encontrada", response = Noticia.class),
             @ApiResponse(code = 404, message = "Protocolo não encontrado")
     })
     public ResponseEntity recuperaPorTitulo(@PathVariable("titulo") String titulo) {
@@ -65,11 +68,12 @@ public class NoticiasController {
     @PostMapping
     @ApiOperation(value = "Salvar noticia")
     @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Noticia cadastrada", response = Noticia.class),
             @ApiResponse(code = 400, message = "Something went wrong"),
             @ApiResponse(code = 403, message = "Access Denied"),
     })
-    public ResponseEntity<?> cadastrar(@RequestBody Noticia noticias) {
-        Noticia saved = service.save(noticias);
+    public ResponseEntity<?> cadastrar(@RequestBody Noticia noticia) {
+        Noticia saved = service.save(noticia);
         return ResponseEntity.ok().body(saved);
     }
 }
