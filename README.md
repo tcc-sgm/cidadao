@@ -15,7 +15,7 @@ Membros:
 
     docker build -t sgm/cidadao -f .\Dockerfile .
 
-    docker run -it -p 8081:8081 sgm/cidadao
+    docker run -d -p 8081:8081 sgm/cidadao
 
 ## Documentação da API SWAGGER
 	http://localhost:8081/swagger-ui.html#/
